@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-/* 
+﻿/* 
  * Erstellen Sie eine Klasse Person
  * die Person soll einen Namen und ein Alter haben.
  * Die Person kann sich vorstellen und das Alter erhöht sich an seinem Geburtstag. 

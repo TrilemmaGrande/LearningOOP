@@ -1,13 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Reflection.Metadata.Ecma335;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace LearningOOP._2022_03_03_Aufgabe_Person {
+﻿namespace LearningOOP._2022_03_03_Aufgabe_Person {
     internal class Functions {
         public void MainMenu(Person obj) {
             bool run = true;
@@ -33,7 +24,7 @@ namespace LearningOOP._2022_03_03_Aufgabe_Person {
                         OutputData(obj);
                         break;
                     case "0":
-                       run = false;
+                        run = false;
                         break;
                     default:
                         Console.WriteLine("Eingabe ungültig!");
@@ -108,7 +99,7 @@ namespace LearningOOP._2022_03_03_Aufgabe_Person {
                     "Geburtsdatum noch nicht eingegeben! ");
             }
             else {
-            int age = Convert.ToInt32(today.Substring(6)) - Convert.ToInt32(gebDate.Substring(6));
+                int age = Convert.ToInt32(today.Substring(6)) - Convert.ToInt32(gebDate.Substring(6));
                 if ((Convert.ToInt32(today.Substring(0, 2)) < Convert.ToInt32(gebDate.Substring(0, 2))
                 && Convert.ToInt32(today.Substring(3, 2)) == Convert.ToInt32(gebDate.Substring(3, 2)))
                 || Convert.ToInt32(today.Substring(3, 2)) < Convert.ToInt32(gebDate.Substring(3, 2))) {

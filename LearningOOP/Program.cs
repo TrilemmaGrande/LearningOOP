@@ -2,8 +2,8 @@
 
 namespace LearningOOP {
     internal class Program {
-       static void Main(string[] args) {
-            PapierFunctions papier = new PapierFunctions();            
+        static void Main(string[] args) {
+            PapierFunctions papier = new PapierFunctions();
             papier.PrintPaperStats(papier.CreatePaper());
         }
     }
