@@ -1,12 +1,10 @@
-﻿using LearningOOP._2022_03_03_Aufgabe_Person;
+﻿using LearningOOP._2022_03_06_Aufgabe_Papier;
 
 namespace LearningOOP {
     internal class Program {
        static void Main(string[] args) {
-            Functions functions = new Functions();
-            Person person = new Person();
-
-            functions.MainMenu(person);
+            PapierFunctions papier = new PapierFunctions();            
+            papier.PrintPaperStats(papier.CreatePaper());
         }
     }
 }

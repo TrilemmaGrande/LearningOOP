@@ -14,7 +14,24 @@ using System.Threading.Tasks;
 
 namespace LearningOOP._2022_03_06_Aufgabe_Papier
 {
-    internal class Papier
-    {
+    internal class Papier {
+        private double length;
+        private double width;
+
+        public double GetLength() {
+            return length;
+        }
+        public void SetLength(double length) {
+            this.length = length;
+        }
+        public double GetWidth() {
+            return width;
+        }
+        public void SetWidth(double width) {
+            this.width = width;
+        }
+        public double GetArea() {
+            return length * width / 10000;
+        }
     }
 }
