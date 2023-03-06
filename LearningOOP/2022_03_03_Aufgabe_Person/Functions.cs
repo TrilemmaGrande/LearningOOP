@@ -10,8 +10,8 @@ using System.Threading.Tasks;
 namespace LearningOOP._2022_03_03_Aufgabe_Person {
     internal class Functions {
         public void MainMenu(Person obj) {
-            int exit = 0;
-            while (exit == 0) {
+            bool run = true;
+            while (run) {
                 Console.WriteLine(
                     "Auswahl: \n" +
                     "1: Namen eingeben \n" +
@@ -33,7 +33,7 @@ namespace LearningOOP._2022_03_03_Aufgabe_Person {
                         OutputData(obj);
                         break;
                     case "0":
-                       exit = 1;
+                       run = false;
                         break;
                     default:
                         Console.WriteLine("Eingabe ungültig!");
@@ -101,6 +101,7 @@ namespace LearningOOP._2022_03_03_Aufgabe_Person {
         private void Birthday(Person obj) {
             string gebDate = obj.GetGebDate();
             string today = DateTime.Today.ToString("dd.MM.yyyy");
+            const int waitForBirthday = -1;
 
             if (obj.GetGebDate() == null) {
                 Console.WriteLine(
@@ -111,7 +112,7 @@ namespace LearningOOP._2022_03_03_Aufgabe_Person {
                 if ((Convert.ToInt32(today.Substring(0, 2)) < Convert.ToInt32(gebDate.Substring(0, 2))
                 && Convert.ToInt32(today.Substring(3, 2)) == Convert.ToInt32(gebDate.Substring(3, 2)))
                 || Convert.ToInt32(today.Substring(3, 2)) < Convert.ToInt32(gebDate.Substring(3, 2))) {
-                    age = age - 1;
+                    age += waitForBirthday;
                 }
                 Console.WriteLine(
                     "Alter: " + age);
