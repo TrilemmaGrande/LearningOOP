@@ -14,7 +14,7 @@ namespace LearningOOP._2022_03_06_Aufgabe_Papier {
             foreach (Papier item in obj) {
             Console.WriteLine(
                 $"Das Papier mit der Länge {item.GetLength():F1} cm und Breite {item.GetWidth():F1} cm " +
-                $"hat eine Fläche von {item.GetArea():F1} Quadratmeter\n\n");
+                $"hat eine Fläche von {item.GetArea():F5} Quadratmeter\n\n");
             }
         }
         public Papier[] CreatePaper() {
