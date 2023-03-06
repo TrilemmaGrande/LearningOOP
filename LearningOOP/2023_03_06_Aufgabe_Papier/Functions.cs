@@ -1,5 +1,5 @@
 ﻿namespace LearningOOP._2022_03_06_Aufgabe_Papier {
-    internal class PapierFunctions {
+    internal class Functions {
         private Random random = new Random();
         private Papier[] papiere = new Papier[10];
 
