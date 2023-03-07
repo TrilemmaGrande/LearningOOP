@@ -2,7 +2,7 @@
  * Konstruktoren und Überladungen
  */
 
-namespace Testbereich {
+namespace Konstruktoren {
     internal class konstruktor_ueberladung {
         static void Main(string[] args) {
             Auto a1 = new Auto("Trabant", 150);

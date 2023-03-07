@@ -21,7 +21,7 @@ namespace BeispielStatic {
         public Auto(string marke, string modell) {
             this.marke = marke;
             this.modell = modell;
-            anzahl = anzahl + 1;
+            anzahl++;
         }
         public static int GetAnzahl() {
             return anzahl;

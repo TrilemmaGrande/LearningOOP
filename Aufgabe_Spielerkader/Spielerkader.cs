@@ -1,22 +1,29 @@
 ﻿using System.Dynamic;
 
-namespace AufgabenOOP._2023_03_07_Aufgabe_Spielerkader {
+namespace Aufgabe_Spielerkader {
     class Spieler {        
         private double marktwert;
-        private static int kadermarktwert;
-        private int int moeglicherGewinn;
+        private static double kadermarktwert;
+        private static double kadertransfergebuehr;
+        private Random random = new Random();
 
         public string Name{ get; set; }
         public double Transfergebuehr { get; set; }
         
         public Spieler(string name, double transfergebuehr) {
-            this.Name = name;
-            this.Transfergebuehr = transfergebuehr;
+            Name = name;
+            Transfergebuehr = transfergebuehr;
+            kadertransfergebuehr += Transfergebuehr;          
+            marktwert = Transfergebuehr;
+            kadermarktwert += marktwert;
         }
-
-
-
-
-
+        public void Marktwert() {
+            kadermarktwert -= marktwert;
+            marktwert = random.NextDouble() * 100000;
+            kadermarktwert += marktwert;
+        }
+        public static double Gewinn() {
+            return kadermarktwert - kadertransfergebuehr;
+        }
     }
 }
