@@ -83,14 +83,15 @@ namespace Aufgabe_TV {
                     }
                     i++;
                 }
+                int programOption = 0;
                 Console.WriteLine("Bitte Programmnummer eingeben: ");
-                string k = Console.ReadLine();
-                if (!k.All(char.IsLetter)) {
-                    i = Convert.ToInt32(k);
+                string inputOption = Console.ReadLine();
+                if (inputOption.All(char.IsDigit)) {
+                    programOption = Convert.ToInt32(inputOption);
                 }
-                if (i > 0 && i < programs.Length) {
-                    Console.WriteLine("aktuelles Programm: " + programs[i - 1]);
-                    program = programs[i - 1];
+                if (programOption > 0 && programOption < programs.Length) {
+                    Console.WriteLine("aktuelles Programm: " + programs[programOption - 1]);
+                    program = programs[programOption - 1];
                 }
                 else {
                     Console.WriteLine("Es geht nur von 1-6 du Idiot!");
