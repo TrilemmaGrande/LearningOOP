@@ -37,13 +37,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Beispiel_Komposition", "Bei
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2023_03_10", "2023_03_10", "{5F54564F-D562-41D2-8A63-B8EF68240F08}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aufgabe_Methodenwahnsinn", "Aufgabe_Methodenwahnsinn\Aufgabe_Methodenwahnsinn.csproj", "{C5218B94-6509-436D-9D3C-9E6E6BB5F7F3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aufgabe_Methodenwahnsinn", "Aufgabe_Methodenwahnsinn\Aufgabe_Methodenwahnsinn.csproj", "{C5218B94-6509-436D-9D3C-9E6E6BB5F7F3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aufgabe_TV", "Aufgabe_TV\Aufgabe_TV.csproj", "{E3AF206E-2D19-41F8-8821-5F18ED439CE5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aufgabe_TV", "Aufgabe_TV\Aufgabe_TV.csproj", "{E3AF206E-2D19-41F8-8821-5F18ED439CE5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aufgabe_Warenhaus", "Aufgabe_Warenhaus\Aufgabe_Warenhaus.csproj", "{9B4743B0-303C-4281-888A-ACE00B2275ED}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aufgabe_Warenhaus", "Aufgabe_Warenhaus\Aufgabe_Warenhaus.csproj", "{9B4743B0-303C-4281-888A-ACE00B2275ED}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aufgabe_Studentendatenbank", "Aufgabe_Studentendatenbank\Aufgabe_Studentendatenbank.csproj", "{6CD252F5-8A88-4410-B359-D889E03397C7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aufgabe_Studentendatenbank", "Aufgabe_Studentendatenbank\Aufgabe_Studentendatenbank.csproj", "{6CD252F5-8A88-4410-B359-D889E03397C7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2023_03_13", "2023_03_13", "{37C39F6E-E5E1-411B-B6B0-7CB5FA94A920}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aufgabe_Parkplatz", "Aufgabe_Parkplatz\Aufgabe_Parkplatz.csproj", "{91719FB1-D3CE-40C0-AFF8-6B5A94A572C2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -111,6 +115,10 @@ Global
 		{6CD252F5-8A88-4410-B359-D889E03397C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6CD252F5-8A88-4410-B359-D889E03397C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6CD252F5-8A88-4410-B359-D889E03397C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91719FB1-D3CE-40C0-AFF8-6B5A94A572C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91719FB1-D3CE-40C0-AFF8-6B5A94A572C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91719FB1-D3CE-40C0-AFF8-6B5A94A572C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91719FB1-D3CE-40C0-AFF8-6B5A94A572C2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -131,6 +139,7 @@ Global
 		{E3AF206E-2D19-41F8-8821-5F18ED439CE5} = {5F54564F-D562-41D2-8A63-B8EF68240F08}
 		{9B4743B0-303C-4281-888A-ACE00B2275ED} = {5F54564F-D562-41D2-8A63-B8EF68240F08}
 		{6CD252F5-8A88-4410-B359-D889E03397C7} = {5F54564F-D562-41D2-8A63-B8EF68240F08}
+		{91719FB1-D3CE-40C0-AFF8-6B5A94A572C2} = {37C39F6E-E5E1-411B-B6B0-7CB5FA94A920}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {FDBBC5BC-8122-487C-BB39-E6C1996ACEC3}
