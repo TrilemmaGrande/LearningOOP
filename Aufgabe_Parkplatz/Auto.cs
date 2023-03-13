@@ -18,34 +18,38 @@ namespace Aufgabe_Parkplatz {
         }
         public bool GetGeparkt() {
             return geparkt;
-        }       
+        }        
+        private string GetCarInfo() {
+            return $"{marke} {modell}";
+        }
         public void Einparken(Parkplatz parkplatz) {
             if (!geparkt) {
                 if (parkplatz.GetFreieParkboxen() > 0) {
                     this.parkbox = parkplatz.Einparken(this);
                     this.parkplatz = parkplatz;
-                    this.geparkt = true;
-                    Console.WriteLine("eingeparkt!");                
+                    this.geparkt = !geparkt;
+                    Console.WriteLine($"{GetCarInfo()} \t erfolgreich auf {parkplatz.GetName()} eingeparkt!");                
                 }
                 else {
-                    Console.WriteLine("Parkplatz voll!");
+                    Console.WriteLine($"{GetCarInfo()} \t nicht eingeparkt, {parkplatz.GetName()} voll!");
                 }
             }
             else {
-                Console.WriteLine("bereits eingeparkt!");
+                Console.WriteLine($"{GetCarInfo()} \t wurde bereits auf {parkplatz.GetName()} eingeparkt!");
             }
         }
         public void Ausparken() {
             if (geparkt) {
-                parkplatz.Ausparken(parkbox);
+                parkplatz.Ausparken(parkbox);                
+                this.geparkt = !geparkt;
                 this.parkbox = null;
+                Console.WriteLine($"{GetCarInfo()} \tvon {parkplatz.GetName()} ausgeparkt!");
                 this.parkplatz = null;
-                this.geparkt = false;
-                Console.WriteLine("ausgeparkt!");
             }
             else {
-                Console.WriteLine("nicht eingeparkt!");
+                Console.WriteLine($"{GetCarInfo()} \t auf {parkplatz.GetName()} nicht eingeparkt!");
             }
         }
+       
     }
 }
