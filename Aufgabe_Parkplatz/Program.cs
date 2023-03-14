@@ -21,7 +21,7 @@
             a1.Einparken(p2);   // already parked in p1, should get error string!
             a1.Ausparken();     
             a1.Einparken(p2);   // should work
-            a5.Einparken(p1);   // should work
+            a5.Einparken(p1);   // should work         
         }
     }
 }
