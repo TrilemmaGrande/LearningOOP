@@ -11,8 +11,7 @@
             this.auto = auto;
             this.parkbox = parkbox;
             this.parkplatz = parkplatz;
-        }
-       
+        }       
         public Parkbox GetParkbox()
         {
             return parkbox;

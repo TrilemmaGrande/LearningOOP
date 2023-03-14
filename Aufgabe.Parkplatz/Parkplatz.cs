@@ -40,7 +40,6 @@ namespace Aufgabe.Parkplatz
         }
         public void Einparken(Auto auto)
         {
-
             if (GetFreieParkboxen() > 0)
             {
                 for (int i = 0; i < parkboxen.Length; i++)
@@ -72,25 +71,21 @@ namespace Aufgabe.Parkplatz
         }
         public void Ausparken(Auto auto)
         {
-           
-                if (auto.GetTicket() != null)
-                {
-                    Console.WriteLine(
-                        $"{auto.GetCarInfo()} \t von " +
-                        $"{auto.GetTicket().GetParkplatz().GetName()} ausgeparkt!");
+            if (auto.GetTicket() != null)
+            {
+                Console.WriteLine(
+                    $"{auto.GetCarInfo()} \t von " +
+                    $"{auto.GetTicket().GetParkplatz().GetName()} ausgeparkt!");
 
                 auto.GetTicket().GetParkbox().SetBelegt(null);
                 auto.GetTicket().Entwerten();
                 auto.SetTicket(null);
-                }
-                else
-                {
-                    Console.WriteLine(
-                        $"{auto.GetCarInfo()} \t nicht eingeparkt!");
-                }
-
-            
+            }
+            else
+            {
+                Console.WriteLine(
+                    $"{auto.GetCarInfo()} \t nicht eingeparkt!");
+            }
         }
-
     }
 }

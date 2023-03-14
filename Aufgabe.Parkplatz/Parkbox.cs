@@ -8,7 +8,6 @@ namespace Aufgabe.Parkplatz
 {
     internal class Parkbox
     {
-
         private Auto auto;
         
         public void SetBelegt(Auto auto)
@@ -19,6 +18,5 @@ namespace Aufgabe.Parkplatz
         {
             return auto != null;
         }
-
     }
 }
