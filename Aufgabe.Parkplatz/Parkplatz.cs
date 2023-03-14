@@ -47,7 +47,7 @@ namespace Aufgabe.Parkplatz
                     if (!parkboxen[i].GetBelegt())
                     {
                         parkboxen[i].SetBelegt(auto);
-                        Parkticket parkticket = new Parkticket(auto, parkboxen[i], this);
+                        Parkticket parkticket = new Parkticket(parkboxen[i], this);
                         auto.SetTicket(parkticket);
                         break;
                     }
