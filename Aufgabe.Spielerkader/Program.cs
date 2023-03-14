@@ -1,4 +1,4 @@
-﻿namespace Aufgabe_Spielerkader
+﻿namespace Aufgabe.Spielerkader
 {
     internal class Program
     {

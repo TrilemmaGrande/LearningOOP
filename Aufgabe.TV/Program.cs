@@ -1,6 +1,9 @@
-﻿namespace Aufgabe.TV {
-    internal class Program {
-        static void Main(string[] args) {
+﻿namespace Aufgabe.TV
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
             Tv tv = new Tv();
             tv.TurnOn();
             tv.RaiseVolume();

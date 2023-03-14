@@ -6,79 +6,106 @@ using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Aufgabe.TV {
-    internal class Tv {
+namespace Aufgabe.TV
+{
+    internal class Tv
+    {
         private bool switchedOn;
         private int volume = 10;
         private int volumeStep = 1;
         private string[] programs = { "weißes Rauschen", "öffentlich rechtlicher scheiß", "MTV", "KiKa", "VIVA", "Pornokanal" };
         private string program = "weißes Rauschen";
 
-        public void SetVolumeStep(int volumeStep) {
-            if (switchedOn) {
+        public void SetVolumeStep(int volumeStep)
+        {
+            if (switchedOn)
+            {
                 this.volumeStep = volumeStep;
             }
-            else {
+            else
+            {
                 TvIdiot();
             }
         }
-        public void RaiseVolume() {
-            if (switchedOn) {
+        public void RaiseVolume()
+        {
+            if (switchedOn)
+            {
                 volume += volumeStep;
                 TestVolume();
             }
-            else {
+            else
+            {
                 TvIdiot();
             }
         }
-        public void LowerVolume() {
-            if (switchedOn) {
+        public void LowerVolume()
+        {
+            if (switchedOn)
+            {
                 volume -= volumeStep;
                 TestVolume();
             }
-            else {
+            else
+            {
                 TvIdiot();
             }
         }
-        public void TurnOn() {
-            if (!switchedOn) {
+        public void TurnOn()
+        {
+            if (!switchedOn)
+            {
                 switchedOn = !switchedOn;
             }
         }
-        public void TurnOff() {
-            if (switchedOn) {
+        public void TurnOff()
+        {
+            if (switchedOn)
+            {
                 switchedOn = !switchedOn;
             }
         }
-        private string isOn() {
-            if (switchedOn) {
+        private string isOn()
+        {
+            if (switchedOn)
+            {
                 return "Der Gerät ist an";
             }
             return "Der Gerät ist aus";
         }
-        public void GetInfo() {
-            if (switchedOn) {
+        public void GetInfo()
+        {
+            if (switchedOn)
+            {
                 Console.WriteLine($"{isOn()} und {volume} laut");
             }
-            else {
+            else
+            {
                 Console.WriteLine($"{isOn()}");
             }
         }
-        private void TestVolume() {
-            if (volume < 0) {
+        private void TestVolume()
+        {
+            if (volume < 0)
+            {
                 volume = 0;
             }
-            else if (volume > 100) {
+            else if (volume > 100)
+            {
                 volume = 100;
             }
         }
-        public void switchProgram() {
-            if (switchedOn) {
+        public void switchProgram()
+        {
+            if (switchedOn)
+            {
                 int i = 1;
                 Console.WriteLine("Programme: ");
-                foreach (string item in programs) {
+                foreach (string item in programs)
+                {
                     Console.WriteLine(i + " " + item);
-                    if (item == program) {
+                    if (item == program)
+                    {
                         Console.WriteLine("^^^^^^^^^^^^^^");
                     }
                     i++;
@@ -86,22 +113,27 @@ namespace Aufgabe.TV {
                 int programOption = 0;
                 Console.WriteLine("Bitte Programmnummer eingeben: ");
                 string inputOption = Console.ReadLine();
-                if (inputOption.All(char.IsDigit)) {
+                if (inputOption.All(char.IsDigit))
+                {
                     programOption = Convert.ToInt32(inputOption);
                 }
-                if (programOption > 0 && programOption < programs.Length) {
+                if (programOption > 0 && programOption < programs.Length)
+                {
                     Console.WriteLine("aktuelles Programm: " + programs[programOption - 1]);
                     program = programs[programOption - 1];
                 }
-                else {
+                else
+                {
                     Console.WriteLine("Es geht nur von 1-6 du Idiot!");
                 }
             }
-            else {
+            else
+            {
                 TvIdiot();
             }
         }
-        private void TvIdiot() {
+        private void TvIdiot()
+        {
             Console.WriteLine("TV ist aus du Idiot!");
         }
     }
