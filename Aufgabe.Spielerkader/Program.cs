@@ -1,6 +1,9 @@
-﻿namespace Aufgabe_Spielerkader {
-    internal class Program {
-        static void Main(string[] args) {
+﻿namespace Aufgabe_Spielerkader
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
             Spieler sp1 = new Spieler("Horst", 20000);
             Spieler sp2 = new Spieler("Dieter", 40000);
 

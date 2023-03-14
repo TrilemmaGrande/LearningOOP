@@ -1,6 +1,9 @@
-﻿namespace This {
-    internal class Program {
-        static void Main(string[] args) {
+﻿namespace This
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
             Person batman = new Person("Batman");
             Person robin = new Person("Robin");
 
@@ -13,21 +16,27 @@
             Console.WriteLine(batman.GetPartner().GetName());
             Console.WriteLine(robin.GetPartner().GetName());
         }
-        class Person {
+        class Person
+        {
             private string name;
             private Person partner;
 
-            public Person(string name) {
+            public Person(string name)
+            {
                 this.name = name;
             }
-            public string GetName() {
+            public string GetName()
+            {
                 return name;
             }
-            public Person GetPartner() {
+            public Person GetPartner()
+            {
                 return partner;
             }
-            public void SetPartner(Person partner) {
-                if (this.partner is null) {
+            public void SetPartner(Person partner)
+            {
+                if (this.partner is null)
+                {
                     this.partner = partner;
                     this.partner.SetPartner(this);
                 }

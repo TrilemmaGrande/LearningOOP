@@ -10,63 +10,78 @@ using System.Threading.Tasks;
  * Erstellen Sie einen mehrere Konstruktoren.
  */
 
-namespace Aufgabe.Sweatshirt {
-    internal class Sweatshirt {
+namespace Aufgabe.Sweatshirt
+{
+    internal class Sweatshirt
+    {
         private string color;
         private int size;
         private bool isDry;
 
-        public Sweatshirt(string color, int size) {
+        public Sweatshirt(string color, int size)
+        {
             this.color = color;
             this.size = size;
             isDry = true;
         }
-        public Sweatshirt(string color) {
+        public Sweatshirt(string color)
+        {
             this.color = color;
             size = 50;
             isDry = true;
         }
-        public Sweatshirt(int size) {
+        public Sweatshirt(int size)
+        {
             color = "Blue";
             this.size = size;
             isDry = true;
         }
 
-        public string GetColor() {
+        public string GetColor()
+        {
             return color;
         }
-        public int GetSize() {
+        public int GetSize()
+        {
             return size;
         }
-        public bool GetIsDry() {
+        public bool GetIsDry()
+        {
             return isDry;
         }
-        public void SetIsDry(bool isDry) {
+        public void SetIsDry(bool isDry)
+        {
             this.isDry = isDry;
         }
 
-        public void Dry() {
-            if (!GetIsDry()) {
+        public void Dry()
+        {
+            if (!GetIsDry())
+            {
                 SetIsDry(true);
             }
         }
-        public void Wash() {
+        public void Wash()
+        {
             SetIsDry(false);
         }
-        public void GetInfos() {
+        public void GetInfos()
+        {
             const string dry = "trocken";
             const string wet = "nass";
             string isDry;
 
-            if (GetIsDry()) {
+            if (GetIsDry())
+            {
                 isDry = dry;
             }
-            else {
+            else
+            {
                 isDry = wet;
             }
             Console.WriteLine(
                 $"Das Sweatshirt in der Farbe {GetColor()} " +
                 $"hat die Größe {GetSize()} und ist {isDry}");
         }
-    }    
+    }
 }

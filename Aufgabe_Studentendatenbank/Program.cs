@@ -1,4 +1,4 @@
-﻿namespace Aufgabe.Papier
+﻿namespace Aufgabe.Studentendatenbank
 {
     internal class Program
     {

@@ -1,6 +1,9 @@
-﻿namespace Beispiel.Assoziation {
-    internal class Program {
-        static void Main(string[] args) {
+﻿namespace Beispiel.Assoziation
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
             Class oop = new Class("OOP");
             Class sql = new Class("SQL");
 

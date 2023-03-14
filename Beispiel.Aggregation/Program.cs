@@ -1,6 +1,9 @@
-﻿namespace Beispiel.Aggregation {
-    internal class Program {
-        static void Main(string[] args) {
+﻿namespace Beispiel.Aggregation
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
             Console.WriteLine("Hello, World!");
             Student franzi = new Student("Franzi");
             Student huihui = new Student("Huihui");

@@ -6,22 +6,28 @@
  * "Das Papier mit der Länge xx.x cm und Breite yy.y cm hat eine Fläche von zz.z Quadratmeter."
  */
 
-namespace Aufgabe.Papier {
-    internal class Papier {
+namespace Aufgabe.Papier
+{
+    internal class Papier
+    {
         private double length;
         private double width;
 
-        public Papier(double length, double width) {
+        public Papier(double length, double width)
+        {
             this.length = length;
             this.width = width;
         }
-        public double GetLength() {
+        public double GetLength()
+        {
             return length;
         }
-        public double GetWidth() {
+        public double GetWidth()
+        {
             return width;
         }
-        public double GetArea() {
+        public double GetArea()
+        {
             return length * width / 10000;
         }
     }

@@ -1,8 +1,11 @@
 ﻿using System;
 
-namespace BeispielStatic {
-    class Program {
-        static void Main(string[] args) {
+namespace BeispielStatic
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
             Auto a1 = new Auto("Fiat", "500");
             Auto a2 = new Auto("Ford", "Fiesta");
             int anzahl = Auto.GetAnzahl();
@@ -12,21 +15,25 @@ namespace BeispielStatic {
             Console.WriteLine(a2.GetAnzahl2());
         }
     }
-    class Auto {
+    class Auto
+    {
         private string marke;
         private string modell;
 
         private static int anzahl;
 
-        public Auto(string marke, string modell) {
+        public Auto(string marke, string modell)
+        {
             this.marke = marke;
             this.modell = modell;
             anzahl++;
         }
-        public static int GetAnzahl() {
+        public static int GetAnzahl()
+        {
             return anzahl;
         }
-        public int GetAnzahl2() {
+        public int GetAnzahl2()
+        {
             return anzahl;
         }
     }
