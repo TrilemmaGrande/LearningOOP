@@ -9,62 +9,72 @@ namespace Aufgabe.Parkplatz
     internal class Auto
     {
         private string marke;
-        private string modell;
-        private bool geparkt;
-        private Parkplatz parkplatz;
-        private Parkbox parkbox;
+        private string modell;      
+        private Parkplatz parkplatz;     
+        private int ticket;
 
         public Auto(string marke, string modell)
         {
             this.marke = marke;
             this.modell = modell;
         }
-        public bool GetGeparkt()
-        {
-            return geparkt;
-        }
         private string GetCarInfo()
         {
             return $"{marke} {modell}";
         }
+        public bool GetGeparkt()
+        {
+            return parkplatz != null;
+        }
         public void Einparken(Parkplatz parkplatz)
         {
-            if (!geparkt)
+            if (this.parkplatz == null)
             {
                 if (parkplatz.GetFreieParkboxen() > 0)
                 {
-                    this.parkbox = parkplatz.Einparken(this);
                     this.parkplatz = parkplatz;
-                    this.geparkt = !geparkt;
+                    parkplatz.Einparken(this);
                     Console.WriteLine(
                         $"{GetCarInfo()} \t erfolgreich auf " +
-                        $"{parkplatz.GetName()} eingeparkt!"
-                        );
+                        $"{parkplatz.GetName()} eingeparkt!");
                 }
                 else
                 {
-                    Console.WriteLine($"{GetCarInfo()} \t nicht eingeparkt, {parkplatz.GetName()} voll!");
+                    Console.WriteLine(
+                        $"{GetCarInfo()} \t nicht eingeparkt," +
+                        $" {parkplatz.GetName()} voll!");
                 }
             }
             else
             {
-                Console.WriteLine($"{GetCarInfo()} \t wurde bereits auf {parkplatz.GetName()} eingeparkt!");
+                Console.WriteLine(
+                    $"{GetCarInfo()} \t wurde bereits auf " +
+                    $"{parkplatz.GetName()} eingeparkt!");
             }
         }
         public void Ausparken()
         {
-            if (geparkt)
+            if (parkplatz != null)
             {
-                parkplatz.Ausparken(parkbox);
-                this.geparkt = !geparkt;
-                this.parkbox = null;
-                Console.WriteLine($"{GetCarInfo()} \tvon {parkplatz.GetName()} ausgeparkt!");
+                parkplatz.Ausparken(GetTicket());                            
+                Console.WriteLine(
+                    $"{GetCarInfo()} \t von " +
+                    $"{parkplatz.GetName()} ausgeparkt!");
                 this.parkplatz = null;
             }
             else
             {
-                Console.WriteLine($"{GetCarInfo()} \t auf {parkplatz.GetName()} nicht eingeparkt!");
+                Console.WriteLine(
+                    $"{GetCarInfo()} \t nicht eingeparkt!");
             }
+        }
+        public void SetTicket(int ticket)
+        {
+            this.ticket = ticket;
+        }
+        private int GetTicket()
+        {
+            return ticket;
         }
 
     }

@@ -10,19 +10,14 @@ namespace Aufgabe.Parkplatz
     {
 
         private Auto auto;
-        private bool belegt;
-
+        
         public void SetBelegt(Auto auto)
         {
-            if (!GetBelegt())
-            {
-                this.auto = auto;
-                belegt = !belegt;
-            }
+            this.auto = auto;
         }
         public bool GetBelegt()
         {
-            return belegt;
+            return auto != null;
         }
 
     }

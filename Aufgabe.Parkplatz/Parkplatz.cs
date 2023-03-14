@@ -10,11 +10,13 @@ namespace Aufgabe.Parkplatz
     internal class Parkplatz
     {
         private Parkbox[] parkboxen;
+        private Parkticket[] parktickets;
         private string name;
 
         public Parkplatz(string name, int anzahlBoxen)
         {
             parkboxen = new Parkbox[anzahlBoxen];
+            parktickets = new Parkticket[anzahlBoxen];
             this.name = name;
             for (int i = 0; i < anzahlBoxen; i++)
             {
@@ -37,25 +39,28 @@ namespace Aufgabe.Parkplatz
             }
             return counter;
         }
-        public Parkbox Einparken(Auto auto)
-        {
+        public void Einparken(Auto auto)
+        {            
             for (int i = 0; i < parkboxen.Length; i++)
             {
                 if (!parkboxen[i].GetBelegt())
                 {
                     parkboxen[i].SetBelegt(auto);
-                    return parkboxen[i];
+                    parktickets[i] = new Parkticket(auto, parkboxen[i]);
+                    auto.SetTicket(parktickets[i].GetTicketID());
+                    break;
                 }
-            }
-            return null;
+            }          
         }
-        public void Ausparken(Parkbox parkbox)
+        public void Ausparken(int ticketID)
         {
-            for (int i = 0; i < parkboxen.Length; i++)
+            for (int i = 0; i < parktickets.Length; i++)
             {
-                if (parkboxen[i] == parkbox)
+                if (parktickets[i].GetTicketID() == ticketID)
                 {
-                    parkboxen[i].SetBelegt(null);
+                    parktickets[i].GetParkbox().SetBelegt(null);
+                    parktickets[i].Entwerten();
+                    break;
                 }
             }
         }
