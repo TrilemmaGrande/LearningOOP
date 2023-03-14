@@ -14,17 +14,17 @@
 
             Console.WriteLine($"auf {p1.GetName()} gibt es {p1.GetFreieParkboxen()} freie Parkplätze");
             Console.WriteLine($"auf {p2.GetName()} gibt es {p2.GetFreieParkboxen()} freie Parkplätze");
-            a1.Einparken(p1);
-            a2.Einparken(p1);
-            a3.Einparken(p1);
-            a4.Einparken(p1);
-            a5.Einparken(p1);   // parking 5 cars in 4 Slots, get error String!
+            p1.Einparken(a1);
+            p1.Einparken(a2);
+            p1.Einparken(a3);
+            p1.Einparken(a4);
+            p1.Einparken(a5);   // parking 5 cars in 4 Slots, get error String!
             Console.WriteLine($"auf {p1.GetName()} gibt es {p1.GetFreieParkboxen()} freie Parkplätze"); //should be 0 free Slots
             Console.WriteLine($"auf {p2.GetName()} gibt es {p2.GetFreieParkboxen()} freie Parkplätze");
-            a1.Einparken(p2);   // already parked in p1, should get error string!
-            a1.Ausparken();
-            a1.Einparken(p2);   // should work
-            a5.Einparken(p1);   // should work         
+            p1.Einparken(a1);   // already parked in p1, should get error string!
+            p1.Ausparken(a1);
+            p1.Einparken(a1);   // should work
+            p1.Einparken(a5);   // should work         
         }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Sockets;
 using System.Net.WebSockets;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,13 +11,11 @@ namespace Aufgabe.Parkplatz
     internal class Parkplatz
     {
         private Parkbox[] parkboxen;
-        private Parkticket[] parktickets;
         private string name;
 
         public Parkplatz(string name, int anzahlBoxen)
         {
             parkboxen = new Parkbox[anzahlBoxen];
-            parktickets = new Parkticket[anzahlBoxen];
             this.name = name;
             for (int i = 0; i < anzahlBoxen; i++)
             {
@@ -40,29 +39,57 @@ namespace Aufgabe.Parkplatz
             return counter;
         }
         public void Einparken(Auto auto)
-        {            
-            for (int i = 0; i < parkboxen.Length; i++)
-            {
-                if (!parkboxen[i].GetBelegt())
-                {
-                    parkboxen[i].SetBelegt(auto);
-                    parktickets[i] = new Parkticket(auto, parkboxen[i]);
-                    auto.SetTicket(parktickets[i].GetTicketID());
-                    break;
-                }
-            }          
-        }
-        public void Ausparken(int ticketID)
         {
-            for (int i = 0; i < parktickets.Length; i++)
+
+            if (GetFreieParkboxen() > 0)
             {
-                if (parktickets[i].GetTicketID() == ticketID)
+                for (int i = 0; i < parkboxen.Length; i++)
                 {
-                    parktickets[i].GetParkbox().SetBelegt(null);
-                    parktickets[i].Entwerten();
-                    break;
+                    if (!parkboxen[i].GetBelegt())
+                    {
+                        parkboxen[i].SetBelegt(auto);
+                        Parkticket parkticket = new Parkticket(auto, parkboxen[i], this);
+                        auto.SetTicket(parkticket);
+                        break;
+                    }
+                    else
+                    {
+                        Console.WriteLine(
+                            $"{auto.GetCarInfo()} \t nicht eingeparkt," +
+                            $" {GetName()} voll!");
+                    }
                 }
+                Console.WriteLine(
+                        $"{auto.GetCarInfo()} \t erfolgreich auf " +
+                        $"{GetName()} eingeparkt!");
             }
+            else
+            {
+                Console.WriteLine(
+                    $"{auto.GetCarInfo()} \t wurde bereits auf " +
+                    $"{GetName()} eingeparkt!");
+            }
+        }
+        public void Ausparken(Auto auto)
+        {
+           
+                if (auto.GetTicket() != null)
+                {
+                    Console.WriteLine(
+                        $"{auto.GetCarInfo()} \t von " +
+                        $"{auto.GetTicket().GetParkplatz().GetName()} ausgeparkt!");
+
+                auto.GetTicket().GetParkbox().SetBelegt(null);
+                auto.GetTicket().Entwerten();
+                auto.SetTicket(null);
+                }
+                else
+                {
+                    Console.WriteLine(
+                        $"{auto.GetCarInfo()} \t nicht eingeparkt!");
+                }
+
+            
         }
 
     }
