@@ -51,15 +51,19 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aufgabe.Warenhaus", "Aufgab
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "20230316", "20230316", "{F8A23B16-A518-4AC9-BC1D-478A0857A5AE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Beispiel.Vererbung", "Beispiel.Vererbung\Beispiel.Vererbung.csproj", "{6C8C648E-2B6F-466D-A9BB-F05EF6D06F43}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Beispiel.Vererbung", "Beispiel.Vererbung\Beispiel.Vererbung.csproj", "{6C8C648E-2B6F-466D-A9BB-F05EF6D06F43}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aufgabe.Simpsons", "Aufgabe.Simpsons\Aufgabe.Simpsons.csproj", "{0068BD6C-628F-4589-AC56-C718945C9B43}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aufgabe.Simpsons", "Aufgabe.Simpsons\Aufgabe.Simpsons.csproj", "{0068BD6C-628F-4589-AC56-C718945C9B43}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "20230314", "20230314", "{78546FFB-000B-4079-ABED-A0E0122D2BF0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aufgabe.Schule", "Aufgabe.Schule\Aufgabe.Schule.csproj", "{482AB105-9AD7-4EDA-A6D9-8C6A0BD77858}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aufgabe.Schule", "Aufgabe.Schule\Aufgabe.Schule.csproj", "{482AB105-9AD7-4EDA-A6D9-8C6A0BD77858}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aufgabe.Lohnabrechnung", "Aufgabe.Lohnabrechnung\Aufgabe.Lohnabrechnung.csproj", "{B212BB91-95CC-4BCE-B528-C1020D2A2207}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aufgabe.Lohnabrechnung", "Aufgabe.Lohnabrechnung\Aufgabe.Lohnabrechnung.csproj", "{B212BB91-95CC-4BCE-B528-C1020D2A2207}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "20230317", "20230317", "{40F2EF58-0A71-4F68-8921-C1F5654A1A1A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aufgabe.Zoo", "Aufgabe.Zoo\Aufgabe.Zoo.csproj", "{A05BED0B-460F-45E0-87DB-1E9DDF4B2B76}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -147,6 +151,10 @@ Global
 		{B212BB91-95CC-4BCE-B528-C1020D2A2207}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B212BB91-95CC-4BCE-B528-C1020D2A2207}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B212BB91-95CC-4BCE-B528-C1020D2A2207}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A05BED0B-460F-45E0-87DB-1E9DDF4B2B76}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A05BED0B-460F-45E0-87DB-1E9DDF4B2B76}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A05BED0B-460F-45E0-87DB-1E9DDF4B2B76}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A05BED0B-460F-45E0-87DB-1E9DDF4B2B76}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -172,6 +180,7 @@ Global
 		{0068BD6C-628F-4589-AC56-C718945C9B43} = {F8A23B16-A518-4AC9-BC1D-478A0857A5AE}
 		{482AB105-9AD7-4EDA-A6D9-8C6A0BD77858} = {78546FFB-000B-4079-ABED-A0E0122D2BF0}
 		{B212BB91-95CC-4BCE-B528-C1020D2A2207} = {F8A23B16-A518-4AC9-BC1D-478A0857A5AE}
+		{A05BED0B-460F-45E0-87DB-1E9DDF4B2B76} = {40F2EF58-0A71-4F68-8921-C1F5654A1A1A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {FDBBC5BC-8122-487C-BB39-E6C1996ACEC3}
