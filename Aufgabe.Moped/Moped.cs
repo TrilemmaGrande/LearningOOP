@@ -14,7 +14,7 @@ namespace Aufgabe.Moped
         public Moped(int seats = 2, string licensePlate = "BIT-LC 1")
         {
             this.licensePlate = licensePlate;
-            this.seats = seats <= 2 ? seats : 2;           
+            this.seats = seats <= 2 ? seats : 2;
         }
         public string GetLicensePlate()
         {
