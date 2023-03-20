@@ -23,7 +23,7 @@ namespace Aufgabe.Lohnabrechnung
         private const int tarifC = 3200;
         private const int tarifD = 5400;
 
-        public Angestellter(string vorname, string name,int alter,Tarifgruppe tarifgruppe)
+        public Angestellter(string vorname, string name,int alter,Tarifgruppe tarifgruppe) : base(vorname,name)
         {
             this.alter = alter;
             this.tarifgruppe = tarifgruppe;

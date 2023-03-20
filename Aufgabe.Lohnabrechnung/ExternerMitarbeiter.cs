@@ -11,7 +11,7 @@ namespace Aufgabe.Lohnabrechnung
         private int projektstunden;
         private const int stundenlohn = 75;
 
-        public ExternerMitarbeiter(string vorname, string name, int projektstunden)
+        public ExternerMitarbeiter(string vorname, string name, int projektstunden) : base(vorname, name)
         {
             this.vorname = vorname;
             this.name = name;

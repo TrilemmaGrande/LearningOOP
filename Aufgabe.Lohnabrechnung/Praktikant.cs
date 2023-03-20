@@ -19,7 +19,7 @@ namespace Aufgabe.Lohnabrechnung
         private const int produktion = 710;
         private const int entwicklung = 935;
 
-        public Praktikant(string vorname, string name, Abteilung abteilung)
+        public Praktikant(string vorname, string name, Abteilung abteilung) : base(vorname,name)
         {
             this.vorname = vorname;
             this.name = name;

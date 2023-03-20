@@ -13,6 +13,11 @@ namespace Aufgabe.Lohnabrechnung
         protected string angestelltAls;
         protected double gehalt;
 
+        public Mitarbeiter(string vorname, string name)
+        {
+            this.vorname = vorname;
+            this.name = name;
+        }
         public void PrintInfo()
         {
             Console.WriteLine(
