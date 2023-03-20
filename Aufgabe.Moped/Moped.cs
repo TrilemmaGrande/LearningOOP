@@ -34,7 +34,7 @@ namespace Aufgabe.Moped
         {
             return seats;
         }
-        public string GetInfos()
+        public virtual string GetInfos()
         {
             return
                 $"Kennzeichen:\t {licensePlate} \n" +

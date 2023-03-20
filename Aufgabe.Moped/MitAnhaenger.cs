@@ -42,7 +42,7 @@ namespace Aufgabe.Moped
         {
             return space;
         }
-        public new string GetInfos()
+        public override string GetInfos()
         {
             Console.Write(base.GetInfos());
             return
