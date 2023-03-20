@@ -9,11 +9,14 @@
             Console.WriteLine(m1.GetInfos());
             Console.WriteLine(m2.GetInfos());
             MitAnhaenger ma1 = new MitAnhaenger(20);
+            Console.WriteLine(   ma1.Unload(5));
             Console.WriteLine(ma1.GetInfos());
             ma1.Drive(10);
             Console.WriteLine(ma1.GetInfos());
-            ma1.Load(10);
+            ma1.Load(20);
+            Console.WriteLine(ma1.Load(20) );
             Console.WriteLine(ma1.GetInfos());
+            Console.WriteLine(ma1.Unload(40));
         }
     }
 }

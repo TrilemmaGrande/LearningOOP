@@ -44,10 +44,8 @@ namespace Aufgabe.Moped
         }
         public new string GetInfos()
         {
+            Console.Write(base.GetInfos());
             return
-                $"Kennzeichen:\t {licensePlate} \n" +
-                $"Kilometer: \t{kilometres} \n" +
-                $"Sitzplätze: \t{seats} \n" +
                 $"Ladefläche: \t{spaceMax} \n" +
                 $"Beladen: \t{space} \n";
         }
