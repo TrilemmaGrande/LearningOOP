@@ -11,19 +11,10 @@ namespace Aufgabe.Moped
         protected string licensePlate;
         protected int kilometres;
         protected int seats;
-        private static int seatsMax = 2;
-
         public Moped(int seats = 2, string licensePlate = "BIT-LC 1")
         {
             this.licensePlate = licensePlate;
-            if (seats <= seatsMax)
-            {
-                this.seats = seats;
-            }
-            else
-            {
-                this.seats = seatsMax;
-            }
+            this.seats = seats <= 2 ? seats : 2;           
         }
         public string GetLicensePlate()
         {
