@@ -36,7 +36,6 @@ namespace Aufgabe.Warenkorb
                 articles[i] = temp[i];
                 temp[i] = null;
             }
-
             articles[^1] = article;
         }
         public void PrintContent()
