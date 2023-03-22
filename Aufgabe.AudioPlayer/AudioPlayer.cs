@@ -35,7 +35,6 @@
                     Console.WriteLine($"ID: {(audioFiles.IndexOf(audioFile) + 1),3:D} {audioFile.Play()}");
                 }
             }
-
         }
         private AudioFile[] Shuffle(List<AudioFile> audioFiles)
         {

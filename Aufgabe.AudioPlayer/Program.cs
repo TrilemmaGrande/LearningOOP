@@ -4,7 +4,6 @@
     {
         static void Main(string[] args)
         {
-
             FLACFile f1 = new FLACFile("test1");
             FLACFile f2 = new FLACFile("test2");
             FLACFile f3 = new FLACFile("test3");

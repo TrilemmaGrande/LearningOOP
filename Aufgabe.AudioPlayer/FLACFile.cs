@@ -11,7 +11,6 @@ namespace Aufgabe.AudioPlayer
         public FLACFile(string fileName) : base(fileName)
         {
         }
-
         public override string Play()
         {
             return ($"\t|\t Type: FLAC \t|\t FileName: {fileName} \t|\t is playing right now.");

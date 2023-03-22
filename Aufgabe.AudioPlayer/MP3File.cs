@@ -11,7 +11,6 @@ namespace Aufgabe.AudioPlayer
         public MP3File(string fileName) : base(fileName)
         {
         }
-
         public override string Play()
         {
             return ($"\t|\t Type: MP3 \t|\t FileName: {fileName} \t|\t is playing right now.");
