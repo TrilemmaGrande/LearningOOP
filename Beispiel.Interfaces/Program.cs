@@ -6,7 +6,7 @@
         {
             IrgendwasMitFahren(new Auto());           
         }
-        public void IrgendwasMitFahren(IFahren fahrzeug)
+        static void IrgendwasMitFahren(IFahren fahrzeug)
         {
             Console.WriteLine("Ich fahre hier!");
         }
