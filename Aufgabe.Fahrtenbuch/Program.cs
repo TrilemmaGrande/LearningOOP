@@ -14,7 +14,6 @@
             faBu1.AddFahrt(f2);
             k1.AddFahrtenbuch(faBu1);
             k1.AddFahrtenbuch(faBu2);
-
         }
     }
 }
