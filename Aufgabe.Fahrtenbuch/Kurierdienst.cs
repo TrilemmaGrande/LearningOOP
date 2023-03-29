@@ -3,10 +3,7 @@
     internal class Kurierdienst
     {
         List<Fahrtenbuch> fahrtenbuecher = new List<Fahrtenbuch>();
-        public Kurierdienst(Fahrtenbuch fahrtenbuch)
-        {
-            fahrtenbuecher.Add(fahrtenbuch);
-        }
+        
         public double BerechneGesamtumsatz()
         {
             double gesamtUmsatz = 0.00;
@@ -34,6 +31,10 @@
             }
             return fahrerUmsatz;
         }        
+        public void AddFahrtenbuch(Fahrtenbuch fahrtenbuch)
+        {
+            fahrtenbuecher.Add(fahrtenbuch);
+        }
 
     }
 }

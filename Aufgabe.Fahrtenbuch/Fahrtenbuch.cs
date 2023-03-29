@@ -11,9 +11,8 @@ namespace Aufgabe.Fahrtenbuch
         protected List<Fahrt> fahrten = new List<Fahrt>();
         protected Fahrer fahrer;
 
-        public Fahrtenbuch(Fahrt fahrt, Fahrer fahrer)
-        {
-            fahrten.Add(fahrt);
+        public Fahrtenbuch(Fahrer fahrer)
+        {            
             this.fahrer = fahrer;
         }
         public double PrintGesamtumsatz()
@@ -48,6 +47,10 @@ namespace Aufgabe.Fahrtenbuch
                 }
             }
             return fahrerUmsatz;
+        }
+        public void AddFahrt(Fahrt fahrt)
+        {
+            fahrten.Add(fahrt);
         }
     }
 }
