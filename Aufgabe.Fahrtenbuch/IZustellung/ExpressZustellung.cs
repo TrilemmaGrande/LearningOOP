@@ -8,7 +8,7 @@ namespace Aufgabe.Fahrtenbuch
 {
     internal class ExpressZustellung : IZustellung
     {
-        public double preisBerechnen(double kilometer)
+        public double PreisBerechnen(double kilometer)
         {
             return kilometer * 3.0;
         }

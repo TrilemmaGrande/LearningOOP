@@ -10,6 +10,6 @@ namespace Aufgabe.Fahrtenbuch
     {
         protected double kilometerPreis;
 
-        public abstract double preisBerechnen(double kilometer);
+        public abstract double PreisBerechnen(double kilometer);
     }
 }

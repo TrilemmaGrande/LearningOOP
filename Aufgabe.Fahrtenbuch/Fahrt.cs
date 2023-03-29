@@ -22,7 +22,7 @@ namespace Aufgabe.Fahrtenbuch
         }
         public double GetFahrtkosten()
         {
-            return fahrzeug.BerechnePreis(kilometer) + zustellungsArt.BerechnePreis(kilometer);
+            return fahrzeug.PreisBerechnen(kilometer) + zustellungsArt.PreisBerechnen(kilometer);
         }
         public DateOnly GetDate()
         {

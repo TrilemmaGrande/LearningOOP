@@ -12,7 +12,7 @@ namespace Aufgabe.Fahrtenbuch
         {
             kilometerPreis = 2.0;
         }
-        public override double preisBerechnen(double kilometer)
+        public override double PreisBerechnen(double kilometer)
         {
             return kilometer * kilometerPreis;
         }

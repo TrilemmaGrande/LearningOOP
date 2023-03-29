@@ -8,7 +8,7 @@ namespace Aufgabe.Fahrtenbuch
 {
     internal class StandardZustellung : IZustellung
     {
-        public double preisBerechnen(double kilometer)
+        public double PreisBerechnen(double kilometer)
         {
             return kilometer;
         }

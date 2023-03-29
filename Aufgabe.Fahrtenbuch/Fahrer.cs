@@ -10,7 +10,7 @@ namespace Aufgabe.Fahrtenbuch
     {
         protected string vorname;
         protected string name;
-        
+
         public Fahrer(string vorname, string name)
         {
             this.vorname = vorname;

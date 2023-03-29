@@ -8,6 +8,6 @@ namespace Aufgabe.Fahrtenbuch
 {
     interface IZustellung
     {
-        public double preisBerechnen(double kilometer);
+        public double PreisBerechnen(double kilometer);
     }
 }
