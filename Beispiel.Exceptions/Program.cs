@@ -5,31 +5,44 @@
         static void Main(string[] args)
         {
             bool fehler = true;
+            int zahl1 = InputInt("Erste Zahl: ");
+            do
+            {
+                int zahl2 = InputInt("Zweite Zahl: ");
+
+                if (zahl2 != 0)
+                {
+                    Console.WriteLine(zahl1 / zahl2);
+                    fehler = false;
+                }
+                else
+                {
+                    Console.WriteLine("Zahl 2 darf nicht 0 sein!");
+                }
+
+            }
+            while (fehler);
+        }
+        static int InputInt(string text)
+        {
+
+            int input = 0;
+            bool fehler = true;
             do
             {
                 try
                 {
-                    Console.Write("Erste Zahl: ");
-                    int zahl1 = int.Parse(Console.ReadLine());
-                    Console.Write("Zweite Zahl: ");
-                    int zahl2 = int.Parse(Console.ReadLine());
-
-                    Console.WriteLine(zahl1 / zahl2);
+                    Console.Write(text);
+                    input = int.Parse(Console.ReadLine());
+                    fehler = false;
                 }
-                catch(FormatException ex)
+                catch (Exception)
                 {
-                    Console.WriteLine("Bitte nur Zahlen eingeben!"); ;
-                }
-                catch (OverflowException ex)
-                {
-                    Console.WriteLine($"Bitte nur im Bereich {int.MinValue} bis {int.MaxValue}!");
-                }
-                catch (DivideByZeroException ex)
-                {
-                    Console.WriteLine("Die zweite Zahl darf nicht 0 sein!");
+                    Console.WriteLine("Nochmal, Du Honk!");
                 }
             }
             while (fehler);
+            return input;
         }
     }
 }
