@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace Aufgabe.Fahrtenbuch
 {
-    internal class StandardZustellung
+    internal class StandardZustellung : IZustellung
     {
+        public double preisBerechnen(double kilometer)
+        {
+            return kilometer;
+        }
     }
 }

@@ -1,15 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Aufgabe.Fahrtenbuch
+﻿namespace Aufgabe.Fahrtenbuch
 {
     internal class Kurierdienst
     {
         List<Fahrtenbuch> fahrtenbuecher = new List<Fahrtenbuch>();
-        public Kurierdienst (Fahrtenbuch fahrtenbuch)
+        public Kurierdienst(Fahrtenbuch fahrtenbuch)
         {
             fahrtenbuecher.Add(fahrtenbuch);
         }
@@ -24,12 +18,22 @@ namespace Aufgabe.Fahrtenbuch
         }
         public double BerechneTagesumsatz(DateOnly date)
         {
-            return 2.2;
+            double tagesUmsatz = 0.00;
+            foreach (Fahrtenbuch fahrtenbuch in fahrtenbuecher)
+            {
+                tagesUmsatz += fahrtenbuch.PrintTagesumsatz(date);
+            }
+            return tagesUmsatz;
         }
         public double BerechneFahrerumsatz(Fahrer fahrer)
         {
-            return 2.2;
-        }
+            double fahrerUmsatz = 0.00;
+            foreach (Fahrtenbuch fahrtenbuch in fahrtenbuecher)
+            {
+                fahrerUmsatz += fahrtenbuch.PrintFahrerumsatz(fahrer);
+            }
+            return fahrerUmsatz;
+        }        
 
     }
 }

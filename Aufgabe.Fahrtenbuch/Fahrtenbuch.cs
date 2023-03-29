@@ -37,9 +37,17 @@ namespace Aufgabe.Fahrtenbuch
             }
             return tagesUmsatz;
         }
-        public Fahrer GetFahrer()
+        public double PrintFahrerumsatz(Fahrer fahrer)
         {
-            return fahrer;
+            double fahrerUmsatz = 0.00;
+            foreach (Fahrt fahrt in fahrten)
+            {
+                if (this.fahrer == fahrer)
+                {
+                    fahrerUmsatz += fahrt.GetFahrtkosten();
+                }
+            }
+            return fahrerUmsatz;
         }
     }
 }
