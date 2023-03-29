@@ -44,5 +44,16 @@
             while (fehler);
             return input;
         }
+        static int InputInt2(string text)
+        {
+            int input = 0;
+            bool ok = false;
+
+            do
+            {
+                ok = int.TryParse(Console.ReadLine(), out input);
+            } while (!ok);
+            return input;
+        }
     }
 }
