@@ -11,10 +11,6 @@ namespace Aufgabe.Fahrtenbuch
         public Fahrrad()
         {
             kilometerPreis = 1.0;
-        }
-        public override double PreisBerechnen(double kilometer)
-        {
-            return kilometer * kilometerPreis;
-        }
+        }       
     }
 }

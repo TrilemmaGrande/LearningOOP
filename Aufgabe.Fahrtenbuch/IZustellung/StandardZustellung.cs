@@ -8,9 +8,10 @@ namespace Aufgabe.Fahrtenbuch
 {
     internal class StandardZustellung : IZustellung
     {
+        private double kilometerPreis = 1.0;
         public double PreisBerechnen(double kilometer)
         {
-            return kilometer;
+            return kilometer * kilometerPreis;
         }
     }
 }

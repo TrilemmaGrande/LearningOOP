@@ -16,5 +16,9 @@ namespace Aufgabe.Fahrtenbuch
             this.vorname = vorname;
             this.name = name;
         }
+        public string GetName()
+        {
+            return vorname + " " + name;
+        }
     }
 }
