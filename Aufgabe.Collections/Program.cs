@@ -52,7 +52,6 @@
                 {
                     Console.WriteLine($"-{item}");
                 }
-
             }
         }
     }
