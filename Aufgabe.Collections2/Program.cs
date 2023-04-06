@@ -14,7 +14,7 @@ namespace Aufgabe.Collections2
                 string text =
                 "15;D;Peter Schmidt;Wuppertal\n" +
                 "17;D;Hans Meier;Düsseldorf\n" +
-                "31;E;Regina Schulz;Mettmann\n" +
+                "23;E;Regina Schulz;Mettmann\n" +
                 "31;D;Kathrin Müller;Erkrath\n" +
                 "32;E;Rudolf Kramer;Witten\n" +
                 "35;E;Anne Kunze;Bremen";
