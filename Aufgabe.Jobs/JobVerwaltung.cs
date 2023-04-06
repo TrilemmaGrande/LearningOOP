@@ -2,8 +2,12 @@
 {
     internal class JobVerwaltung
     {
-        private Queue<Job> jobs = new Queue<Job>();
+        private Queue<Job> jobs;
 
+        public JobVerwaltung()
+        {
+            this.jobs = new Queue<Job>();
+        }
         public void AddJob(Job job)
         {
             jobs.Enqueue(job);
