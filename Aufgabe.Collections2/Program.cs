@@ -11,17 +11,17 @@ namespace Aufgabe.Collections2
             sw.Start();
             for (int i = 0; i < 1000000; i++)
             {
-            string text =
-            "15;D;Peter Schmidt;Wuppertal\n" +
-            "17;D;Hans Meier;Düsseldorf\n" +
-            "23;E;Regina Schulz;Mettmann\n" +
-            "31;D;Kathrin Müller;Erkrath\n" +
-            "32;E;Rudolf Kramer;Witten\n" +
-            "35;E;Anne Kunze;Bremen";
+                string text =
+                "15;D;Peter Schmidt;Wuppertal\n" +
+                "17;D;Hans Meier;Düsseldorf\n" +
+                "31;E;Regina Schulz;Mettmann\n" +
+                "31;D;Kathrin Müller;Erkrath\n" +
+                "32;E;Rudolf Kramer;Witten\n" +
+                "35;E;Anne Kunze;Bremen";
 
-            StringReader sr = new StringReader(text);
-            sr.MakeDataSet();
-            //sr.PrintDataSet();
+                StringReader sr = new StringReader(text);
+                sr.MakeDataSet();
+                sr.PrintDataSet();
             }
             sw.Stop();
             Console.WriteLine(sw.ElapsedMilliseconds);
@@ -34,10 +34,6 @@ namespace Aufgabe.Collections2
         private string dataSetKey;
         private List<string> dataSetKeys = new List<string>();
         private List<Dictionary<string, string>> dataSet = new List<Dictionary<string, string>>();
-        private Dictionary<string, string> zimmer = new Dictionary<string, string>();
-        private Dictionary<string, string> vorname = new Dictionary<string, string>();
-        private Dictionary<string, string> nachname = new Dictionary<string, string>();
-        private Dictionary<string, string> wohnort = new Dictionary<string, string>();
 
         public StringReader(string text)
         {
@@ -45,6 +41,10 @@ namespace Aufgabe.Collections2
         }
         public void MakeDataSet()
         {
+            Dictionary<string, string> zimmer = new Dictionary<string, string>();
+            Dictionary<string, string> vorname = new Dictionary<string, string>();
+            Dictionary<string, string> nachname = new Dictionary<string, string>();
+            Dictionary<string, string> wohnort = new Dictionary<string, string>();
             dataSet.Add(zimmer);
             dataSet.Add(vorname);
             dataSet.Add(nachname);
@@ -55,14 +55,9 @@ namespace Aufgabe.Collections2
                 itemizedSplittedString = row.Split(';', ' ');
                 dataSetKey = itemizedSplittedString[0];
                 dataSetKeys.Add(dataSetKey);
-                if (itemizedSplittedString[1] == "E")
-                {
-                    itemizedSplittedString[1] = "Einzelzimmer";
-                }
-                else
-                {
-                    itemizedSplittedString[1] = "Doppelzimmer";
-                }
+                itemizedSplittedString[1].Replace("E", "Einzelzimmer");
+                itemizedSplittedString[1].Replace("D", "Doppelzimmer");
+
                 zimmer.Add(dataSetKey, itemizedSplittedString[1]);
                 vorname.Add(dataSetKey, itemizedSplittedString[2]);
                 nachname.Add(dataSetKey, itemizedSplittedString[3]);
@@ -84,7 +79,7 @@ namespace Aufgabe.Collections2
                             Console.WriteLine("  " + item.Value);
                         }
                     }
-                }  
+                }
             }
         }
     }
