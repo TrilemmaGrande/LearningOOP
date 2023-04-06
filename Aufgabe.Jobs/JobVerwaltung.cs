@@ -3,7 +3,7 @@
     internal class JobVerwaltung
     {
         private Queue<Job> jobs = new Queue<Job>();
-               
+        
         public void AddJob(Job job)
         {
             jobs.Enqueue(job);
