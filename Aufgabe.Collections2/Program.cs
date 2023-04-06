@@ -33,7 +33,11 @@ namespace Aufgabe.Collections2
         private string[] splittedString;
         private string dataSetKey;
         private List<string> dataSetKeys = new List<string>();
-        private List<Dictionary<string, string>> dataSet = new List<Dictionary<string, string>>();        
+        private List<Dictionary<string, string>> dataSet = new List<Dictionary<string, string>>();
+        private Dictionary<string, string> zimmer = new Dictionary<string, string>();
+        private Dictionary<string, string> vorname = new Dictionary<string, string>();
+        private Dictionary<string, string> nachname = new Dictionary<string, string>();
+        private Dictionary<string, string> wohnort = new Dictionary<string, string>();
 
         public StringReader(string text)
         {
@@ -41,18 +45,13 @@ namespace Aufgabe.Collections2
         }
         public void MakeDataSet()
         {
-            Dictionary<string, string> zimmer = new Dictionary<string, string>();
-            Dictionary<string, string> vorname = new Dictionary<string, string>();
-            Dictionary<string, string> nachname = new Dictionary<string, string>();
-            Dictionary<string, string> wohnort = new Dictionary<string, string>();
-                dataSet.Add(zimmer);
-                dataSet.Add(vorname);
-                dataSet.Add(nachname);
-                dataSet.Add(wohnort);
+            dataSet.Add(zimmer);
+            dataSet.Add(vorname);
+            dataSet.Add(nachname);
+            dataSet.Add(wohnort);
 
             foreach (var row in splittedString)
             {
-
                 itemizedSplittedString = row.Split(';', ' ');
                 dataSetKey = itemizedSplittedString[0];
                 dataSetKeys.Add(dataSetKey);
